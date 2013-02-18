@@ -1,0 +1,203 @@
+{
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    0,
+    20,
+    3
+  ],
+  "format": "jpeg85",
+  "interactivity": {
+    "layer": "",
+    "template_teaser": "",
+    "template_full": "",
+    "template_location": "",
+    "fields": []
+  },
+  "minzoom": 1,
+  "maxzoom": 7,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "labels.mss",
+    "rainbow.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99978348919961,
+        -85.051,
+        180,
+        83.63381093402975
+      ],
+      "id": "tint-band",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "tint-band"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99998938710385,
+        -85.051,
+        179.99999,
+        85.051
+      ],
+      "id": "ocean",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-ocean.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ocean"
+    },
+    {
+      "id": "country",
+      "name": "country",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip"
+      },
+      "geometry": "polygon"
+    },
+    {
+      "id": "rivers",
+      "name": "rivers",
+      "srs": "",
+      "class": "",
+      "geometry": "linestring",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-rivers-lake-centerlines.zip"
+      }
+    },
+    {
+      "id": "lakes",
+      "name": "lakes",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-lakes.zip",
+        "id": "lakes",
+        "project": "geography-class",
+        "srs": null
+      },
+      "geometry": "polygon"
+    },
+    {
+      "id": "state",
+      "name": "state",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "admin-0-line-disputed",
+      "name": "admin-0-line-disputed",
+      "srs": "",
+      "class": "border disputed",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-boundary-lines-claims.zip"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "admin-0-line-land",
+      "name": "admin-0-line-land",
+      "srs": "",
+      "class": "border country",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-boundary-lines-land.zip"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "glacier",
+      "name": "glacier",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-glaciated-areas.zip"
+      },
+      "geometry": "polygon"
+    },
+    {
+      "id": "geo-lines",
+      "name": "geo-lines",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-geographic-lines.zip"
+      },
+      "geometry": "linestring"
+    },
+    {
+      "id": "country-name",
+      "name": "country-name",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-country-points.zip",
+        "id": "country-name",
+        "project": "geography-class",
+        "srs": null
+      },
+      "geometry": "point"
+    },
+    {
+      "id": "cities",
+      "name": "cities",
+      "srs": "",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-populated-places-simple.zip",
+        "id": "cities",
+        "project": "geography-class",
+        "srs": ""
+      },
+      "geometry": "point",
+      "extent": [
+        -179.58997888396897,
+        -81.17908472282718,
+        179.38330358817024,
+        82.48332318035943
+      ],
+      "srs-name": "autodetect",
+      "advanced": {}
+    },
+    {
+      "id": "paper",
+      "name": "paper",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "class": "",
+      "Datasource": {
+        "file": "layers/world_extent_wgs84.geojson",
+        "id": "paper",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+        "project": "geography-class"
+      },
+      "geometry": "polygon"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "legend": "",
+  "name": "pindex",
+  "description": "Pindex Map",
+  "attribution": ""
+}
