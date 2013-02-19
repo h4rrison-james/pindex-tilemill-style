@@ -19,7 +19,11 @@
   text-halo-radius:1;
   text-line-spacing:1 * @s;
   text-wrap-width:20;
-  text-name:"''"; /* hackish? */
+  text-placement-type: simple;
+  text-placements: "N,E,W,NE,NW,S,SW,SE";
+  text-dy: 3;
+  text-dx: 3;
+  text-name:"''";
   
   [ScaleRank<2][zoom=2] {
     text-name: "[ABBREV]";
@@ -47,7 +51,50 @@
 
 }
 
-/* ---- CITIES ---- */
+/* ---- States ---- */
+
+#state-name {
+    text-face-name:@futura_italic;
+  	text-fill: @line;
+    opacity: 0.6;
+  	text-size: 9 * @s;
+  	text-halo-fill: rgba(255,255,255,0.5);
+  	text-halo-radius: 1;
+    text-placement-type: simple;
+    text-placements: "N,E,W,NE,NW,S,SW,SE";
+    text-dy: 3;
+    text-dx: 3;
+    text-name:"''";
+
+  [zoom=4] {
+    text-name:"[Abbrev]";
+    [LabelRank<3] { text-size: 12 * @s; }
+  }
+  [zoom=5] {
+    text-name:"[Abbrev]";
+    [LabelRank<3] { text-size: 13 * @s; }
+    [LabelRank=3] { text-size: 12 * @s; }
+    [LabelRank=4] { text-size: 11 * @s; }
+  }
+  [zoom=6] {
+    text-name:"[NAME_1]";
+    [LabelRank<3] { text-size: 14 * @s; }
+    [LabelRank=3] { text-size: 13 * @s; }
+    [LabelRank=4] { text-size: 12 * @s; }
+    [LabelRank=5] { text-size: 11 * @s; }
+  }
+  [zoom=7] {
+    text-name:"[NAME_1]";
+    [LabelRank<3] { text-size: 15 * @s; }
+    [LabelRank=3] { text-size: 14 * @s; }
+    [LabelRank=4] { text-size: 13 * @s; }
+    [LabelRank=5] { text-size: 12 * @s; }
+    [LabelRank=6] { text-size: 11 * @s; }
+    [LabelRank=7] { text-size: 11 * @s; }
+  }
+}
+
+/* ---- Cities ---- */
 
 #cities {
   [SCALERANK<3][zoom>=4],
@@ -65,7 +112,7 @@
   	text-size: 9 * @s;
   	text-halo-fill: rgba(255,255,255,0.5);
   	text-halo-radius: 1;
-  	point-file: url(icons/circle-7.png);
+  	point-file: url(icons/circle-12.png);
     text-placement-type: simple;
     text-placements: "N,E,W,NE,NW,S,SW,SE";
     text-dy: 3;

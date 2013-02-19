@@ -64,6 +64,24 @@
       "name": "ocean"
     },
     {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "bath",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-bathymetry.zip"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bath"
+    },
+    {
       "id": "country",
       "name": "country",
       "srs": "",
@@ -102,7 +120,10 @@
       "srs": "",
       "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip"
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-lines.zip",
+        "id": "state",
+        "project": "geography-class",
+        "srs": ""
       },
       "geometry": "linestring"
     },
@@ -192,6 +213,28 @@
         "project": "geography-class"
       },
       "geometry": "polygon"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999999990007,
+        -55.91477792755927,
+        180,
+        83.63432689077344
+      ],
+      "id": "state-name",
+      "class": "",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-1-states-provinces-scale-ranks.zip",
+        "id": "state-name",
+        "project": "geography-class",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "state-name",
+      "status": "off"
     }
   ],
   "scale": 1,

@@ -232,4 +232,8 @@ Map {
   [zoom>6] { line-width: 23; }
 }
 
+#bath[DEPTH>0] {
+  polygon-fill: aliceblue;
+  polygon-comp-op: multiply;
+}
 
