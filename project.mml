@@ -10,7 +10,7 @@
     20,
     3
   ],
-  "format": "jpeg85",
+  "format": "png8",
   "interactivity": {
     "layer": "",
     "template_teaser": "",
@@ -163,7 +163,10 @@
       "srs": "",
       "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-geographic-lines.zip"
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/physical/10m-geographic-lines.zip",
+        "id": "geo-lines",
+        "project": "geography-class",
+        "srs": ""
       },
       "geometry": "linestring"
     },
@@ -176,7 +179,7 @@
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-country-points.zip",
         "id": "country-name",
         "project": "geography-class",
-        "srs": null
+        "srs": ""
       },
       "geometry": "point"
     },
@@ -238,7 +241,7 @@
     }
   ],
   "scale": 1,
-  "metatile": 2,
+  "metatile": 3,
   "legend": "",
   "name": "pindex",
   "description": "Pindex Map",

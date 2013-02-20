@@ -198,15 +198,17 @@ Map {
   }
 }
 
-#state[ADM0_A3="USA"],
-#state[ADM0_A3="CAN"],
-#state[ADM0_A3="AUS"] {
-  [zoom>3] {
+/* Show state lines according to scale rank, only after level 3 */
+#state[SCALERANK<2][zoom=3],
+#state[SCALERANK<4][zoom=4],
+#state[SCALERANK<5][zoom=5],
+#state[SCALERANK<6][zoom=6],
+#state[SCALERANK<7][zoom=7],
+{
     line-color:@line;
     line-opacity:0.25;
-    line-width:1.2 * @s;
+    line-width:1 * @s;
     line-dasharray:6,2,2,2;
-  }
 }
 
 /* Transparent PNG overlay for paper texture */
@@ -224,14 +226,15 @@ Map {
   opacity: 0.5;
   line-join: round;
   image-filters: agg-stack-blur(5,5);
-  [zoom=2] { line-width: 3; }
-  [zoom=3] { line-width: 5; }
-  [zoom=4] { line-width: 8; }
-  [zoom=5] { line-width: 12; }
-  [zoom=6] { line-width: 17; }
-  [zoom>6] { line-width: 23; }
+  [zoom=2] { line-width: 3 * @s; }
+  [zoom=3] { line-width: 5 * @s; }
+  [zoom=4] { line-width: 8 * @s; }
+  [zoom=5] { line-width: 12 * @s; }
+  [zoom=6] { line-width: 17 * @s; }
+  [zoom>6] { line-width: 23 * @s; }
 }
 
+/* Bathymetry */
 #bath[DEPTH>0] {
   polygon-fill: aliceblue;
   polygon-comp-op: multiply;

@@ -18,37 +18,46 @@
   text-halo-fill:rgba(255,255,255,0.5);
   text-halo-radius:1;
   text-line-spacing:1 * @s;
-  text-wrap-width:20;
+  text-wrap-width:50;
   text-placement-type: simple;
-  text-placements: "N,E,W,NE,NW,S,SW,SE";
-  text-dy: 3;
-  text-dx: 3;
+  text-placements: "N,S,NE,NW,SW,SE,W,E";
+  text-dy: 0;
+  text-dx: 0;
   text-name:"''";
   
-  [ScaleRank<2][zoom=2] {
+  [LabelRank<2][zoom=2] {
     text-name: "[ABBREV]";
   }
-  [ScaleRank<3][zoom=3] {
+  [LabelRank<3][zoom=3] {
     text-name: "[ABBREV]";
     text-size:11 * @s;
   }
-  [ScaleRank<4][zoom=4] {
-    text-name: "[NAME]";
-    text-size:12 * @s;
+  [zoom=4] {
+    text-name:"[NAME]";
+    [LabelRank<3] { text-size: 12 * @s; }
   }
-  [ScaleRank<5][zoom=5] {
-    text-name: "[NAME]";
-    text-size:13 * @s;
-    text-character-spacing:1 * @s;
-    text-line-spacing:1 * @s;
+  [zoom=5] {
+    text-name:"[NAME]";
+    [LabelRank<3] { text-size: 13 * @s; }
+    [LabelRank=3] { text-size: 12 * @s; }
+    [LabelRank=4] { text-size: 12 * @s; }
   }
-  [ScaleRank<9][zoom>5] {
-    text-name: "[NAME]";
-    text-size:15 * @s;
-    text-character-spacing:2 * @s;
-    text-line-spacing:2 * @s;
+  [zoom=6] {
+    text-name:"[NAME]";
+    [LabelRank<3] { text-size: 14 * @s; }
+    [LabelRank=3] { text-size: 13 * @s; }
+    [LabelRank=4] { text-size: 12 * @s; }
+    [LabelRank=5] { text-size: 12 * @s; }
   }
-
+  [zoom=7] {
+    text-name:"[NAME]";
+    [LabelRank<3] { text-size: 15 * @s; }
+    [LabelRank=3] { text-size: 14 * @s; }
+    [LabelRank=4] { text-size: 13 * @s; }
+    [LabelRank=5] { text-size: 12 * @s; }
+    [LabelRank=6] { text-size: 12 * @s; }
+    [LabelRank>7] { text-size: 12 * @s; }
+  }
 }
 
 /* ---- States ---- */
@@ -107,16 +116,16 @@
   [SCALERANK=9][zoom>=8],
   [SCALERANK=10][zoom>=8] {
     text-name: "[NAME]";
-  	text-fill: @line * 0.3;
+  	text-fill: @line * 0.6;
   	text-face-name:@futura_med;
   	text-size: 9 * @s;
   	text-halo-fill: rgba(255,255,255,0.5);
   	text-halo-radius: 1;
-  	point-file: url(icons/circle-12.png);
+  	point-file: url(icons/circle-6.png);
     text-placement-type: simple;
-    text-placements: "N,E,W,NE,NW,S,SW,SE";
-    text-dy: 3;
-    text-dx: 3;
+    text-placements: "W,E,NE,NW,N,S,SW,SE";
+    text-dy: 6;
+    text-dx: 6;
   }
   [zoom=4] {
     [SCALERANK<3] { text-size: 12 * @s; }
@@ -188,7 +197,7 @@
 /* ---- GEOGRAPHIC LINES ---- */
 #geo-lines[zoom>1][ScaleRank<10]{ 
   text-dy:-7;
-  text-name:"[Name]";
+  text-name:"";
   text-face-name:@futura_med;
   text-fill:@line;
   text-placement:line;
